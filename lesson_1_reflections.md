@@ -22,26 +22,27 @@ By using `diff`, you can immediately see the additions, edits and removals that 
 It makes it easier to spot at which point in the revision history bugs were introduced to a program. It also enables you to revert back to an earlier version of a program, should the need arise.
 
 # Concept Map
-                                      Symbols △▽▷◁
-╭───────╮    ╱▔▔▔▔▔▔▔▔▔▔╲   ┌─────┐   ◁= operates on
-│ Clone │ =▷ ▏repository▕ -▷│ Git │   ◁- type-of
-╰───────╯    ╲▁▁▁▁▁▁▁▁▁▁╱   └─────┘   ◁* part-of
-                   △
-                   |
-   ╭─────╮    ╭────────╮    ╭──────╮
-   │ Log │ =▷ │ Commit │ ◁= │ Diff │
-   ╰─────╯    ╰────────╯    ╰──────╯
+
+                                          Symbols △▽▷◁
+    ╭───────╮    ╱▔▔▔▔▔▔▔▔▔▔╲   ┌─────┐   ◁= operates on
+    │ Clone │ =▷ ▏repository▕ -▷│ Git │   ◁- type-of
+    ╰───────╯    ╲▁▁▁▁▁▁▁▁▁▁╱   └─────┘   ◁* part-of
+                       △
+                       |
+       ╭─────╮    ╭────────╮    ╭──────╮
+       │ Log │ =▷ │ Commit │ ◁= │ Diff │
+       ╰─────╯    ╰────────╯    ╰──────╯
 
 # Feature Comparison Chart
 
-                 Any       Use        Manual
-                 Editor    Offline    Save
-Manual Saving    ✓         ✓          ✓
-Dropbox          ✓         ×          ×
-Google Docs      ×         ×          ×
-Wikipedia        ×         ×          ✓
-Git              ✓         ✓          ✓
-SVN              ✓         ×          ✓
+                     Any       Use        Manual
+                     Editor    Offline    Save
+    Manual Saving    ✓         ✓          ✓
+    Dropbox          ✓         ×          ×
+    Google Docs      ×         ×          ×
+    Wikipedia        ×         ×          ✓
+    Git              ✓         ✓          ✓
+    SVN              ✓         ×          ✓
 
 # Commit Size
 
@@ -69,8 +70,8 @@ A test repo.
 
 # Commands So Far
 
-$ git diff      # compare commits
-$ git clone     # make a copy of a repository, including commit history
-$ git checkout  # temporarily reset all files to a previous state
-$ git log       # show the commit history
-$ git init      # create new repo
+    $ git diff      # compare commits
+    $ git clone     # make a copy of a repository, including commit history
+    $ git checkout  # temporarily reset all files to a previous state
+    $ git log       # show the commit history
+    $ git init      # create new repo

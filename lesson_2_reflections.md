@@ -14,50 +14,50 @@
 
 # What happens when you initialize a repository? Why do you need to do it?
 
-This creates an empty repository with a .git/ directory. This lets Git know to start tracking changes.
+This creates an empty repository with a `.git/` directory. This lets Git know to start tracking changes.
 
 # Updated Commands
 
-$ git diff                      # compare stage with working dir
-$ git diff <commit1> <commit2>  # compare commits
-$ git diff --cached             # compare stage with latest commit
-$ git clone                     # make a copy of a repo with history
-$ git checkout                  # temporarily revert all files
-$ git checkout <branch>         # checkout commit or branch
-$ git checkout -b <branch>      # create and checkout new branch
-$ git log                       # show the commit history
-$ git init                      # create new repo
-$ git add file.md               # add files to stage
-$ git commit                    # commit files
-$ git reset --hard              # reset HEAD to previous state
-$ git branch                    # show branches
-$ git branch <branch>           # create new branch
-$ git branch -d <branch>        # delete a branch
-$ git show <commit>             # show changes introduced by a commit
+    $ git diff                      # compare stage with working dir
+    $ git diff <commit1> <commit2>  # compare commits
+    $ git diff --cached             # compare stage with latest commit
+    $ git clone                     # make a copy of a repo with history
+    $ git checkout                  # temporarily revert all files
+    $ git checkout <branch>         # checkout commit or branch
+    $ git checkout -b <branch>      # create and checkout new branch
+    $ git log                       # show the commit history
+    $ git init                      # create new repo
+    $ git add file.md               # add files to stage
+    $ git commit                    # commit files
+    $ git reset --hard              # reset HEAD to previous state
+    $ git branch                    # show branches
+    $ git branch <branch>           # create new branch
+    $ git branch -d <branch>        # delete a branch
+    $ git show <commit>             # show changes introduced by a commit
 
 # Updated Concept Map
 
-               ╭──────╮               Symbols
-               │ init │               -------
-               ╰──────╯               ◁# operates on
-                   #                  ◁- type-of
-                   ▽                  ◁~ part-of
-╭───────╮    ╱▔▔▔▔▔▔▔▔▔▔╲    ┌─────┐  ◁@ refers-to
-│ clone │ #▷ ▏repository▕ ~▷ │ Git │
-╰───────╯    ╲▁▁▁▁▁▁▁▁▁▁╱    └─────┘
-                   △            △
-                   ~            ~
-     ╭─────╮    ╭────────╮    ╱▔▔▔▔▔╲    ╭────────╮    ╱▔▔▔▔▔▔▔▔▔▔▔╲
-     │ log │ #▷ │ commit │ #▷ ▏stage▕ ◁# │ status │ #▷ ▏working dir▕
-     ╰─────╯    ╰────────╯    ╲▁▁▁▁▁╱    ╰────────╯    ╲▁▁▁▁▁▁▁▁▁▁▁╱
-        #     ◁     △   △        △
-        ▽   @       #   #        #
- ╭────────╮    ╭──────╮ #     ╭─────╮
- │ branch │ ◁# │ diff │ #     │ add │
- ╰────────╯    ╰──────╯ #     ╰─────╯
-                    ╭───────╮
-                    │ merge │
-                    ╰───────╯
+                   ╭──────╮               Symbols
+                   │ init │               -------
+                   ╰──────╯               ◁# operates on
+                       #                  ◁- type-of
+                       ▽                  ◁~ part-of
+    ╭───────╮    ╱▔▔▔▔▔▔▔▔▔▔╲    ┌─────┐  ◁@ refers-to
+    │ clone │ #▷ ▏repository▕ ~▷ │ Git │
+    ╰───────╯    ╲▁▁▁▁▁▁▁▁▁▁╱    └─────┘
+                       △            △
+                       ~            ~
+         ╭─────╮    ╭────────╮    ╱▔▔▔▔▔╲    ╭────────╮    ╱▔▔▔▔▔▔▔▔▔▔▔╲
+         │ log │ #▷ │ commit │ #▷ ▏stage▕ ◁# │ status │ #▷ ▏working dir▕
+         ╰─────╯    ╰────────╯    ╲▁▁▁▁▁╱    ╰────────╯    ╲▁▁▁▁▁▁▁▁▁▁▁╱
+            #     ◁     △   △        △
+            ▽   @       #   #        #
+     ╭────────╮    ╭──────╮ #     ╭─────╮
+     │ branch │ ◁# │ diff │ #     │ add │
+     ╰────────╯    ╰──────╯ #     ╰─────╯
+                        ╭───────╮
+                        │ merge │
+                        ╰───────╯
 
 # How is the staging area different from the working directory and the repository? What value do you think it offers?
 
@@ -122,8 +122,8 @@ If you like to test an alternative version of the program and keep it separate f
                     O
                  f3 ┘
 
-$ git log a # 3f, f2, e3
-$ git log b # 4d, 7d, 2c, e3
+    $ git log a # 3f, f2, e3
+    $ git log b # 4d, 7d, 2c, e3
 
 # How do the diagrams help you visualize the branch structure?
 
@@ -155,34 +155,34 @@ Jake and Rachel are editing a file.
 
 Coin branch can be deleted after merging.
 
-$ git checkout master
-$ git merge master coins -m "Merge branch 'coins'"
+    $ git checkout master
+    $ git merge master coins -m "Merge branch 'coins'"
 
-                            3884eab ┐
-                       3e42136 ┐    │
-                  4035769 ┐    │    │
-             25ede83 ┐    │    │    │
-        df03538 ┐    │    │    │    │ O _easy-mode_
-   b0678b1 ┐    │    │    │    │    │╱   ┌ 62d8bb
-    ... -- O -- O -- O -- O -- O -- O -- O -- O _*master_
-            ╲                           ╱     └ ed1198
-             O -- O -- O -- O ----------
-     656b02e ┘    │    │    │
-          a3c0ae4 ┘    │    │
-               0c6daf1 ┘    │
-                    354dfdd ┘
+                             3884eab ┐
+                        3e42136 ┐    │
+                   4035769 ┐    │    │
+              25ede83 ┐    │    │    │
+         df03538 ┐    │    │    │    │ O _easy-mode_
+    b0678b1 ┐    │    │    │    │    │╱   ┌ 62d8bb
+     ... -- O -- O -- O -- O -- O -- O -- O -- O _*master_
+             ╲                           ╱     └ ed1198
+              O -- O -- O -- O ----------
+      656b02e ┘    │    │    │
+           a3c0ae4 ┘    │    │
+                0c6daf1 ┘    │
+                     354dfdd ┘
 
 By merging the two branches, the commit history are merged into the same branched and its commits chronologically sequenced. The `git show` command shows you which changes are introduced by a commit.
 
 # Making the Coin Yellow
 
-$ git checkout -b change-coin-color
-$ atom game.js # make changes to game.js
-$ git add game.js
-$ git commit -m "Give coin solid yellow color"
-$ git checkout master
-$ git merge master change-coin-color
-$ git branch -d change-coin-color
+    $ git checkout -b change-coin-color
+    $ atom game.js # make changes to game.js
+    $ git add game.js
+    $ git commit -m "Give coin solid yellow color"
+    $ git checkout master
+    $ git merge master change-coin-color
+    $ git branch -d change-coin-color
 
 # What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 

@@ -13,12 +13,12 @@
 # @svdb
 -->
 
-$ git create ud775-reflections
+    $ git create ud775-reflections
 
 # When would you want to use a remote repository rather than keeping all your work local?
 
-$ git push origin master
-$ git pull origin master
+    $ git push origin master
+    $ git pull origin master
 
 # Updated Concept Map
 
@@ -144,13 +144,13 @@ Other examples of fast forward merges:
 
 Not fast forward merges, since a can't be reached from b:
 
-     a ┐                      a ┐
-       O                   O -- O -- O
-      ╱                   ╱    ╱
-1 -- 2                   1 -- 2 -- 3
-      ╲                          b ┘
-       3
-     b ┘
+         a ┐                  a ┐
+           O               O -- O -- O
+          ╱               ╱    ╱
+    1 -- 2               1 -- 2 -- 3
+          ╲                      b ┘
+           3
+         b ┘
 
 # What is the benefit of having a copy of the last known state of the remote stored locally?
 
@@ -158,7 +158,8 @@ You can incorporate the latest changes in your own work, and benefit from update
 
 # Adding A Feature To A Remote Repository
 
-1. `git checkout -b change`, `git commit -am "Make change"`
+    $ git checkout -b change
+    $ git commit -am "Make change"
 
     ┌─local──────────────────────┐  ┌─GitHub─────────────────────┐
     │                 change     │  │                            │
@@ -169,7 +170,7 @@ You can incorporate the latest changes in your own work, and benefit from update
     │                            │  │                            │
     └────────────────────────────┘  └────────────────────────────┘
 
-2. `git push origin change`
+    $ git push origin change
 
     ┌─local──────────────────────┐  ┌─GitHub─────────────────────┐
     │                 change     │  │                 change     │
@@ -180,7 +181,7 @@ You can incorporate the latest changes in your own work, and benefit from update
     │                            │  │                            │
     └────────────────────────────┘  └────────────────────────────┘
 
-3. Pull Request
+    Pull Request
 
     ┌─local──────────────────────┐  ┌─GitHub─────────────────────┐
     │                 change     │  │                 change     │
@@ -242,9 +243,9 @@ Without Git or GitHub, you can collaborate using Dropbox or Google Docs or SVN o
 
 Creating a separate branch for your changes keeps your changes organized and easy to review. It won't break the master branch, so you can experiment with the changes before you add them to the master branch. It also makes collaboration easier, which each collaborator making separate branches for their contributions.
 
-$ git pull upstream master
-$ git checkout forest
-$ git merge master forest
-$ git push origin forest
-$ git checkout master
-$ git push
+    $ git pull upstream master
+    $ git checkout forest
+    $ git merge master forest
+    $ git push origin forest
+    $ git checkout master
+    $ git push
