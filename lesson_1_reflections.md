@@ -1,3 +1,18 @@
+<!---
+# lesson_1_reflections.md
+# https://www.udacity.com/course/how-to-use-git-and-github--ud775
+# Lesson 1: Navigating a Commit History
+#
+# In this lesson, you’ll learn about a few different types of version control
+# systems and discover what makes Git a great version control system for
+# programmers. You’ll also get practice using Git to view the history of an
+# existing project. You’ll learn to see all the versions that have been saved,
+# checkout a previous version, and compare two different versions.
+#
+# Sjaak van den Berg
+# @svdb
+-->
+
 # How did viewing a diff between two versions of a file help you see the bug that was introduced?
 
 By using `diff`, you can immediately see the additions, edits and removals that happened between two files. I use `colordiff` to colorize the output, so that differences also visually stand out.
